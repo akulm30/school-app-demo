@@ -107,8 +107,8 @@ body {
   visibility: hidden;
   pointer-events: none;
   transition:
-    background-color 650ms cubic-bezier(.4, 0, .2, 1),
-    visibility 0s linear 650ms;
+    background-color 800ms cubic-bezier(.25, .1, .25, 1),
+    visibility 0s linear 800ms;
 }
 
 #menu-toggle:checked ~ .overlay {
@@ -130,7 +130,7 @@ body {
   overflow-y: auto;
   transform: translate3d(-110%, 0, 0);
   will-change: transform;
-  transition: transform 650ms cubic-bezier(.4, 0, .2, 1);
+  transition: transform 800ms cubic-bezier(.25, .1, .25, 1);
 }
 
 #menu-toggle:checked ~ .overlay .drawer {
@@ -237,10 +237,6 @@ body {
   cursor: pointer;
 }
 
-/* Respect the iPhone's Reduce Motion accessibility setting. */
-@media (prefers-reduced-motion: reduce) {
-  .overlay, .drawer { transition: none; }
-}
 </style>
 </head>
 
