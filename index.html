@@ -107,8 +107,8 @@ body {
   visibility: hidden;
   pointer-events: none;
   transition:
-    background-color 320ms ease,
-    visibility 0s linear 320ms;
+    background-color 420ms cubic-bezier(.22, 1, .36, 1),
+    visibility 0s linear 420ms;
 }
 
 #menu-toggle:checked ~ .overlay {
@@ -128,12 +128,13 @@ body {
   background: #1c1c1e;
   box-shadow: 6px 0 20px #0004;
   overflow-y: auto;
-  transform: translateX(-110%);
-  transition: transform 320ms cubic-bezier(.22, .61, .36, 1);
+  transform: translate3d(-110%, 0, 0);
+  will-change: transform;
+  transition: transform 420ms cubic-bezier(.22, 1, .36, 1);
 }
 
 #menu-toggle:checked ~ .overlay .drawer {
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
 }
 
 .profile {
